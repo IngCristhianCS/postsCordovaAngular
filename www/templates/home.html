@@ -1,0 +1,45 @@
+<lx-tabs lx-theme="dark" lx-color="light-blue" lx-indicator="black">
+	<lx-tab  lx-label ="Posts">
+		<div class="p+">
+			<div class="card top-space" ng-repeat="post in posts">
+				<div class="p+">
+					<strong class="fs-headline display-block tc-red-600">
+						{{post.title}}
+					</strong>
+					<div class="paragraph fs-body-l mt+">
+						{{post.body}}
+					</div>
+					<div class="card_actions">
+						<lx-button href="#!/posts/{{post.id}}" lx-color="grey" lx-type="flat">Leer mas</lx-button>
+						<lx-button ng-click="removePost(post)" lx-color="red" lx-type="flat">Eliminar</lx-button>
+						<lx-button href="#!/posts/{{post.id}}/edit" lx-color="blue" lx-type="flat">Actualizar</lx-button>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</lx-tab>
+	<lx-tab  lx-label="Users">
+		<div class="p+">
+			<div class="card top-space" ng-repeat="user in users">
+				<div flex-container="row">
+					<div class="card__img card__img--left" style="height: 100px">
+						<img src="https://img.clipartfest.com/b96092f9de8378a35b62767dcd0b2d2d_user-f027-user-male-man-user-clipart-icon_400-400.png" alt="">
+					</div>
+					<div flex-item flex-container="column">
+						<div flex-item>
+							<strong class="fs-headline display-block">
+								{{user.name}}
+							</strong>
+							<strong class="fs-subhead display-block tc-black-2">
+								{{user.email}}
+							</strong>
+						</div>
+						<div class="card_actions">
+							<a href="#">Ver Usuario</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</lx-tab>
+</lx-tabs>

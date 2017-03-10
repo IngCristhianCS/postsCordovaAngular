@@ -1,0 +1,22 @@
+<form ng-submit="addOrUpdatePost()">
+<input type="hidden" ng-model="post.id" disabled="">
+<div class="p+ pt0">
+	<div class="card top-space" >	
+		<div class="p+">
+		    <div flex-container="row" flex-gutter="24">
+		        <div flex-item>
+		            <lx-text-field lx-label="Titulo">
+		                <input type="text" ng-model="post.title">
+		            </lx-text-field>
+		            <lx-text-field lx-label="Contenido">
+		            	<textarea ng-model="post.body" cols="30" rows="10"></textarea>
+		            </lx-text-field>
+		        </div>
+		    </div>
+		    <div class="card_actions">
+		    	<lx-button lx-color="green" type="submit">Enviar</lx-button>
+			</div>
+	    </div> 
+    </div>
+</div>
+</form>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="ModuloFinal">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+	<title></title>
+	<link rel="stylesheet" href="//cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+	<link rel="stylesheet" href="lumx/lumx.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="alertify/css/alertify.min.css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+	<script src="https://code.angularjs.org/1.6.2/angular-route.js"></script>
+	<script src="https://code.angularjs.org/1.6.2/angular-resource.min.js"></script>
+	<script src="https://code.angularjs.org/1.6.2/angular-animate.min.js"></script>
+	<script src="js/velocity.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+	<script src="lumx/lumx.min.js"></script>
+	<script src="alertify/alertify.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/services.js"></script>
+	<script src="js/controllers.js"></script>
+</head>
+<body>  
+	<div class="toolbar">
+	    <div class="toolbar__left mr++">
+	    	<lx-fab lx-direction="right">
+		        <lx-fab-trigger>		            
+		            <lx-button lx-size="xl" lx-type="fab"  lx-tooltip-position="bottom">
+		            	<i class="mdi mdi-menu"></i>		            	
+		                <i class="mdi mdi-plus"></i>
+		            </lx-button>
+		        </lx-fab-trigger>
+		 
+		        <lx-fab-actions>		        		        	
+	        		<lx-button lx-size="l" lx-color="black" lx-type="fab" lx-tooltip="Inicio" lx-tooltip-position="bottom">
+		                <a href="#!/"><i class="mdi mdi-home"></i></a>
+		            </lx-button>
+		        	
+		            		 
+		            <lx-button lx-size="l" lx-color="black" lx-type="fab" lx-tooltip="Crear Post" lx-tooltip-position="bottom">
+		                <a href="#!/posts"><i class="mdi mdi-plus"></i></a>
+		            </lx-button>
+		        </lx-fab-actions>
+		    </lx-fab>
+	        
+	    </div>
+	    <span class="toolbar__label fs-title"></span>
+		<div class="toolbar__right">
+	        <lx-search-filter lx-closed="true">
+	            <input type="text" ng-model="vm.toolbar">
+	        </lx-search-filter>	        
+	    </div>
+	</div>
+	<div flex-container="row" flex-align="center" ng-controller="MainCtrl as main">
+		<div ng-view class="view-animate" flex-item="9">
+			
+		</div>
+	</div>
+</body>
+</html>
